@@ -11,22 +11,23 @@
 
 <header>
     <h1>✿ Kolam Drawing Studio ✿</h1>
-    <p>Create beautiful traditional kolams with your own dot patterns</p>
+    <p>Create beautiful traditional kolams with your own designs</p>
 </header>
 
 <main class="container">
 
+    <!-- DOT CUSTOMIZATION -->
     <section class="controls">
 
-        <h2>Customize Dots</h2>
+        <h2>Customize Dot Pattern</h2>
 
-        <label>Number of Rows</label>
+        <label for="dotRows">Number of Rows</label>
         <input type="number" id="dotRows" min="1" max="30" value="5">
 
-        <label>Number of Columns</label>
+        <label for="dotColumns">Number of Columns</label>
         <input type="number" id="dotColumns" min="1" max="30" value="5">
 
-        <label>Dot Arrangement</label>
+        <label for="dotPattern">Dot Arrangement</label>
         <select id="dotPattern">
             <option value="square">Square Grid</option>
             <option value="rectangle">Rectangle Grid</option>
@@ -38,19 +39,22 @@
             <option value="custom">Custom Placement</option>
         </select>
 
-        <label>Horizontal Spacing</label>
-        <input type="range" id="horizontalSpace" min="15" max="120" value="60">
+        <label for="horizontalSpace">Horizontal Spacing</label>
+        <input type="range" id="horizontalSpace"
+               min="15" max="120" value="60">
         <span id="horizontalValue">60</span>
 
-        <label>Vertical Spacing</label>
-        <input type="range" id="verticalSpace" min="15" max="120" value="60">
+        <label for="verticalSpace">Vertical Spacing</label>
+        <input type="range" id="verticalSpace"
+               min="15" max="120" value="60">
         <span id="verticalValue">60</span>
 
-        <label>Dot Size</label>
-        <input type="range" id="dotSize" min="2" max="15" value="6">
+        <label for="dotSize">Dot Size</label>
+        <input type="range" id="dotSize"
+               min="2" max="15" value="6">
         <span id="dotSizeValue">6</span>
 
-        <label>Dot Colour</label>
+        <label for="dotColor">Dot Colour</label>
         <input type="color" id="dotColor" value="#222222">
 
         <button id="generateBtn" class="primary">
@@ -59,41 +63,52 @@
 
         <hr>
 
+        <!-- DRAWING TOOLS -->
         <h2>Drawing Tools</h2>
 
         <div class="tool-buttons">
-            <button id="drawBtn" class="active">✏ Draw</button>
+            <button id="drawBtn" class="active">✏ Free Draw</button>
+            <button id="straightBtn">／ Straight Line</button>
+            <button id="curveBtn">⌒ Curve Line</button>
+            <button id="fillBtn">🪣 Fill Colour</button>
             <button id="placeBtn">＋ Place Dots</button>
-            <button id="eraseBtn">⌫ Erase</button>
+            <button id="eraseBtn">⌫ Eraser</button>
             <button id="eraseDotBtn">● Erase Dots</button>
             <button id="undoBtn">↶ Undo</button>
             <button id="clearBtn">Clear Drawing</button>
         </div>
 
-        <label>Line Colour</label>
+        <label for="lineColor">Line Colour</label>
         <input type="color" id="lineColor" value="#222222">
 
-        <label>Background Colour</label>
+        <label for="fillColor">Fill Colour</label>
+        <input type="color" id="fillColor" value="#ff4081">
+
+        <label for="bgColor">Background Colour</label>
         <input type="color" id="bgColor" value="#ffffff">
 
-        <label>Brush Size</label>
-        <input type="range" id="brushSize" min="1" max="20" value="4">
+        <label for="brushSize">Brush Size</label>
+        <input type="range" id="brushSize"
+               min="1" max="20" value="4">
         <span id="brushValue">4</span>
 
         <button id="resetBtn">Reset Everything</button>
 
     </section>
 
+    <!-- DRAWING CANVAS -->
     <section class="drawing-section">
 
         <h2>Your Kolam Canvas</h2>
 
         <p id="modeText">
-            Select a tool and start creating your kolam.
+            Select a tool and start drawing.
         </p>
 
         <div class="canvas-container">
-            <canvas id="kolamCanvas" width="800" height="800"></canvas>
+            <canvas id="kolamCanvas"
+                    width="800" height="800">
+            </canvas>
         </div>
 
         <div class="bottom-buttons">
