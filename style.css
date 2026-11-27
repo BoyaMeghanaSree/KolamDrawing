@@ -42,7 +42,11 @@ header p {
     background: white;
     padding: 22px;
     border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.drawing-section {
+    min-width: 0;
 }
 
 h2 {
@@ -126,10 +130,6 @@ hr {
     border: none;
     border-top: 1px solid #eee;
     margin: 25px 0;
-}
-
-.drawing-section {
-    min-width: 0;
 }
 
 .drawing-section > p {
