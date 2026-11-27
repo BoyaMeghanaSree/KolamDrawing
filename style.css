@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fff8ef;
+    color: #333;
+}
+
+header {
+    background: #8b2635;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.controls,
+.drawing-section {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #8b2635;
+    font-size: 20px;
+    margin: 10px 0 18px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 7px;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #8b2635;
+    cursor: pointer;
+}
+
+input[type="color"] {
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+button {
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #eee;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.82;
+}
+
+button.active,
+.primary {
+    background: #8b2635;
+    color: white;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.tool-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+    margin: 15px 0;
+}
+
+#generateBtn,
+#resetBtn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 25px 0;
+}
+
+.drawing-section {
+    min-width: 0;
+}
+
+.drawing-section > p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.canvas-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    border: 2px solid #e4d5c4;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: white;
+    touch-action: none;
+    cursor: crosshair;
+}
+
+.bottom-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.bottom-buttons button {
+    min-width: 180px;
+}
+
+#status {
+    color: #8b2635;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #8b2635;
+    color: white;
+    margin-top: 30px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin: 12px auto;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .controls,
+    .drawing-section {
+        padding: 16px;
+    }
+
+    .canvas-container {
+        width: 100%;
+    }
+}
